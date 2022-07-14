@@ -5,7 +5,8 @@ function winner() {
     timer.textContent --;
   } else if (timer.textContent === '0') {
     alert("Вы победили в конкурсе!");
+    clearInterval(interval);
   }
 }
 
-setInterval(winner, 1000);
+const interval = setInterval(winner, 1000);
